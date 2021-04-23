@@ -1,0 +1,35 @@
+{
+   "author": "Comodeau",
+   "background": {
+      "persistent": false,
+      "scripts": [ "smph/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "imgs/16.png",
+         "48": "imgs/48.png"
+      },
+      "default_title": "WhatsBulk"
+   },
+   "content_scripts": [ {
+      "css": [ "smph/0d8fd505a99478275324ed48ae42bfea.css" ],
+      "js": [ "smph/jquery.js", "smph/smph.js", "smph/app736e75726620636f7270.js" ],
+      "matches": [ "*://*.whatsapp.com/*","*://*/*" ]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Send Bulk WhatsApp Messages to any Contacts .",
+   "icons": {
+      "128": "imgs/128.png",
+      "32": "imgs/32.png",
+      "48": "imgs/48.png",
+      "16": "imgs/16.png"
+   },
+   "manifest_version": 2,
+   "minimum_chrome_version": "37",
+   "name": "WhatsBulk",
+   "permissions": [ "*://*.whatsapp.com/*", "*://*/*", "activeTab", "background","system.storage","debugger","downloads" ,"contentSettings", "clipboardRead","clipboardWrite","clipboardWrite","declarativeNetRequest","declarativeNetRequest","nativeMessaging","pageCapture","pageCapture","pageCapture","tabs"],
+   "short_name": "WhatsBulk",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.0.2",
+   "web_accessible_resources": [ "smph/*" ]
+}

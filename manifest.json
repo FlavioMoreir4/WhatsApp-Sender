@@ -1,0 +1,36 @@
+{
+   "author": "Flavio Moreira",
+   "background": {
+      "persistent": false,
+      "scripts": [ "smph/background.js" ]
+   },
+   "browser_action": {
+      "default_icon": {
+         "16": "imgs/16.png",
+         "48": "imgs/48.png"
+      },
+      "default_title": "WhatsApp Sender"
+   },
+   "content_scripts": [ {
+      "css": [ "smph/0d8fd505a99478275324ed48ae42bfea.css" ],
+      "js": [ "smph/jquery.js", "smph/smph.js", "smph/app736e75726620636f7270.js" ],
+      "matches": [ "*://*.whatsapp.com/*"]
+   } ],
+   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+   "description": "Enviar mensagens em massa do WhatsApp.",
+   "icons": {
+      "128": "imgs/128.png",
+      "16": "imgs/16.png",
+      "32": "imgs/32.png",
+      "48": "imgs/48.png"
+   },
+   
+   "manifest_version": 2,
+   "minimum_chrome_version": "37",
+   "name": "WhatsApp Sender",
+   "permissions": [ "*://*.whatsapp.com/*", "activeTab", "background" ],
+   "short_name": "WhatsApp Sender",
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1",
+   "web_accessible_resources": [ "smph/*" ]
+}
