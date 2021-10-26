@@ -1,9 +1,5 @@
-/*! Copyright (C) Snurf Corp (https://github.com/Iquaridys/Snurf-Corp) - All Rights Reserved.
-
-All information contained herein is, and remains the property of Snurf Corp.
-The intellectual and technical concepts contained herein are proprietary to Snurf Corp.
-Dissemination of this information or reproduction of this material is strictly forbidden unless prior written permission is obtained from Snurf Corp.
-Parts of this code/file are provided under separate licenses.*/
+document.querySelector('#text-description').value = ""
+document.querySelector('#text-send').value = ""
 var base_uri = new URL(window.location.origin).origin;
 
 function dump(e) {

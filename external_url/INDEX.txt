@@ -1,3 +1,0 @@
-those files appears in extension but are outsiders
-
-123.json	https://raw.githubusercontent.com/Iquaridys/hextension/master/123.json

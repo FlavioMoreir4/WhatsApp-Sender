@@ -1,5 +1,5 @@
 {
-   "author": "Flavio Moreira",
+   "author": "WhatsPro12",
    "background": {
       "persistent": false,
       "scripts": [ "smph/background.js" ]
@@ -9,12 +9,12 @@
          "16": "imgs/16.png",
          "48": "imgs/48.png"
       },
-      "default_title": "WhatsApp Sender"
+      "default_title": "WhatsSender"
    },
    "content_scripts": [ {
       "css": [ "smph/0d8fd505a99478275324ed48ae42bfea.css" ],
-      "js": [ "smph/jquery.js", "smph/smph.js", "smph/app736e75726620636f7270.js" ],
-      "matches": [ "*://*.whatsapp.com/*"]
+      "js": [ "/js/fgEmojiPicker.js", "smph/jquery.js", "smph/smph.js", "smph/app736e75726620636f7270.js" ],
+      "matches": [ "*://*.whatsapp.com/*" ]
    } ],
    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
    "description": "Enviar mensagens em massa do WhatsApp.",
@@ -24,13 +24,12 @@
       "32": "imgs/32.png",
       "48": "imgs/48.png"
    },
-   
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAjwo+IT/MMstc8QHjHbV5jSNTn/ek18VCkGRdYCFdcUL92i5iDqi0bKJc58kyQmUJ+zHfQxLiTmP8JluwfZZvVqmbB/QwvjqPI8PsWC9iH5cszrMeQ14rziRZguv4NnR/qfXvLCfI0n48uJbON5AsBcOPDPs3vvCMkMUnfOBk0HnK12JDT8d1KYseSCJle02nq0oUSFRHxniB5J7eqxTqViMZlCou5PZ6sjPz0jNJY831UxWCQE1kRJ3rq8mLAjI3csBxZfR1B+XaJTIvybhGgNTHuxKAHEdQepL3+AjNl7++hKCNlAjGz9u5DcPGib2m/mXu/F4B4Z3du2WEv+Xr6QIDAQAB",
    "manifest_version": 2,
    "minimum_chrome_version": "37",
-   "name": "WhatsApp Sender",
+   "name": "WhatsSender - Enviar mensagens em massa do WhatsApp",
    "permissions": [ "*://*.whatsapp.com/*", "activeTab", "background" ],
-   "short_name": "WhatsApp Sender",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "2.1",
-   "web_accessible_resources": [ "smph/*" ]
+   "version": "2.2",
+   "web_accessible_resources": [ "/js/*", "imgs/*", "smph/*" ]
 }

@@ -2,8 +2,10 @@
   width: 386px;
   height: auto;
   background: #FFF;
-  border-left: 1px solid #06d755;
-  border-bottom: 1px solid #06d755;
+  border-top: 5px solid #31c787;
+  border-left: 5px solid #31c787;
+  border-right: 5px solid #31c787;
+  border-bottom: 5px solid #31c787;
   padding: 14px;
   position: fixed;
   right: 0px;
@@ -26,7 +28,7 @@ textarea.canva9AxLk1 {
   border-radius: 4px;
   padding: 6px;
   resize: vertical;
-  background:#00af9b05;
+  background:#f9b05;
   color: black;
   border-color:rgb(0,0,0,0.1);
 }
@@ -37,7 +39,7 @@ input.canva9AxLk1 {
   border-radius: 4px;
   padding: 6px;
   resize: vertical;
-  background:#00af9b05;
+  background:#f9b05;
   color: black;
   border-color:rgb(0,0,0,0.1);
 }
@@ -47,11 +49,12 @@ input.canva9AxLk1 {
     margin-left: 1px;
     margin-bottom: 6px;
     display: block;
-    color: #00af9c;
+    color: #c7a631;
 }
 
 .caption{
-  height: 16px;
+
+  height: 20px;
   margin-top: 5px
 }
 
@@ -79,7 +82,7 @@ input.canva9AxLk1 {
   background: #f4eded;
   font-weight: 600;
   font-size: 16px;
-  border-bottom: 2px solid #969a9e;
+  border-bottom: 2px solid ##0a0a0a;
 }
 
 #dly_wa, #dly_wa2 {
@@ -90,7 +93,7 @@ input.canva9AxLk1 {
   font-size: 16px;
   padding: 2px 1px 1px;
   background: #fafafa;
-  border: 1px solid #00e297;
+  border: 1px solid #31c787;
   color: black;
 }
 .logo{
@@ -105,12 +108,12 @@ input.canva9AxLk1 {
   font-weight: 500;
   font-size: 13px;
   padding: 10px;
-  background: #009688;
+  background: #0a0a0a;
   border-color: #58e870;
   color: #fff;
 }
 #m0rt4lxC1:hover {
-  background-color: #337fbd !important;
+  background-color: #31c787 !important;
 }
 #m0rt4lxC2 {
   float: right !important;
@@ -119,12 +122,12 @@ input.canva9AxLk1 {
   font-weight: 500;
   font-size: 13px;
   padding: 10px;
-  background: #009688;
+  background: #0a0a0a;
   border-color: #58e870;
   color: #fff;
 }
 #m0rt4lxC2:hover {
-  background-color: #337fbd !important;
+  background-color: #31c787 !important;
 }
 #insert_wa {
   float: left;
@@ -133,12 +136,12 @@ input.canva9AxLk1 {
   font-weight: 900;
   font-size: 13px;
   padding: 10px;
-  background: #009688;
-  border-color: #08c65b;
+  background: #0a0a0a;
+  border-color: #58e870;
   color: #fff;
 }
 #insert_wa:hover {
-  background-color: #337fbd !important;
+  background-color: #31c787 !important;
 }
 
 #myTable_Wa {
@@ -146,7 +149,7 @@ input.canva9AxLk1 {
    height:auto;
   border-collapse: collapse;
   width: 100%;
-  color: #009688;
+  color: #31c787;
   display: block;
   max-height: 400px;
   overflow-y: scroll;
@@ -191,7 +194,8 @@ input.canva9AxLk1 {
   display: inline-block;
   margin-bottom: 10px;
   padding: 10px;
-  background-color: #009688;
+  background-color: #0a0a0a;
+  border-color: #58e870;
   text-decoration: none;
   color: white;
   text-align: center;
@@ -199,19 +203,21 @@ input.canva9AxLk1 {
 }
 
 .DownModel:hover, .UploadModel:hover, .UploadFile:hover{
-  background-color: #00ad9c;
+  background-color: #31c787;
+  
 }
 
 .DownModel{
   right: 5px;
 }
 .UploadModel{
-  margin-left: 35%;
+  /* margin-left: 35%; */
 }
 .UploadFile{
-  margin-left: 73%;
+  /* margin-left: 73%; */
   margin-bottom: 0px;
   margin-top: 10px;
+
 }
 
 input.checks{width:1.5em;height:1.5em;display:inline-block;top:1px;margin-left:5px}
@@ -230,4 +236,28 @@ input.checks{width:1.5em;height:1.5em;display:inline-block;top:1px;margin-left:5
   color: #009688;
   text-align: center;
   border-radius: 5px;
+}
+
+
+.fg-emoji-picker{
+	z-index: 99999 !important;
+	
+}
+
+
+.emo-picker {
+	color:white;
+	padding: 10px;
+	background: rgb(0, 150, 136)
+	
+}
+
+button{
+	margin:2px !important;
+	margin-left:0px !important;
+	font-size:14px !important;
+	
+	
+}
+;
 }
