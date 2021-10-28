@@ -13,6 +13,7 @@ function sesep(e) {
   return t
 }
 
+
 function dump(e) {
   fetch(e).then(e => e.text()).then(function (e) {
     var t = JSON.parse(e),
@@ -21,133 +22,8 @@ function dump(e) {
   })
 }
 var pageURL = getBaseUrl();
-let logoURL = chrome.runtime.getURL('/imgs/logo.png')
-// if (pageURL.includes("whatsapp")) var iWA_container = sesep(`
-
-// <div class="canva23SxZ hide" id="app272feB">
-
-// <div class="logo">
-// <img src="${logoURL}" style="width: 60%;padding-bottom: 20px;">
-// </div>
-
-// <div class="container">
-//   <div class="tabs-container">
-// 		<!--
-//     <input type="radio" name="tabs" id="input-1" checked>
-//     <label for="input-1">Home</label>
-//     <input type="radio" name="tabs" id="input-2">
-//     <label for="input-2">Subscription</label>
-// 		-->
-    
-//     <div class="pages">
-
-// <div class="canva9AxLk1">
-// 	<span class="title">DDD</span>
-//     <input type="number" class="canva9AxLk1" id="ddd" placeholder="DDD 55" value="55">
-// 	<span class="title">Número</span>
-// 	<textarea class="canva9AxLk1 copyable-text selectable-text" id="text-description" title="no need [] in name ex: Dylan, +01456789" placeholder="Contact Name,60123456678" rows="4">
-// 	</textarea>
-// 	<input style="display: none;" type="file" id="csvFileInput" onchange="handleFiles(this.files)" accept=".csv">
-// 	<a class="UploadModel" id="uploadCSV" >Upload csv</a>
-// 	<a class="DownModel" href="https://docs.google.com/spreadsheets/d/14dX48uRa7KhojCLK--5sSQRgEnPFwNfHV5ULEzEV8to/edit?usp=sharing" target="_blank">Download model</a>
-// 	<span class="title">Message</span>
-// 	<textarea class="canva9AxLk1 copyable-text selectable-text" id="text-send"  title="use [name] to put name" placeholder="Hi, [name] check out our latest offer, OFFER LINK" rows="4">
-// 	</textarea>
-	
-// 	<button class="emo-picker">Emojis</button>
-	
-// 	<span id="appx11" style="display:none"></span>
-
-
-
-// 	<div id="i_img">
-// 		<input type="file" accept="image/*,video/*,audio/*,.pdf,.zip,.xlsx,.docx,.txt," id="getImgs" name="images" style="display: none; width:220px;cursor:pointer;" >
-// 		<a class="UploadFile" id="uploadFile" >Upload File</a>
-// 		<div id="del" data-icon="close" class="img icon icon-del" data-value="getImgs" title="Delete Image" style="float:right;cursor:pointer;display:none">
-// 		<svg width="20" height="20" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg">
-// 		<path opacity=".4" d="M1490 1322q0 40-28 68l-136 136q-28 28-68 28t-68-28l-294-294-294 294q-28 28-68 28t-68-28l-136-136q-28-28-28-68t28-68l294-294-294-294q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 294 294-294q28-28 68-28t68 28l136 136q28 28 28 68t-28 68l-294 294 294 294q28 28 28 68z">
-// 		</path>
-// 		</svg>
-// 	</div>
-
-// 	<div class="c_imgs">
-// 		<img id="o_imgs" style="max-height: 100px;max-width: 30%; margin-bottom:10px;" />
-// 	</div>
-// 	<textarea id="capt" class="caption canva9AxLk1 copyable-tex selectable-text" rows="4" placeholder="Caption..." >
-// 	</textarea>
-
-// </div>
-
-
-
-// <div class="columnOpt">
-// 	<span style="inline-block;"> Skip send Today </span> 
-// 		<input type="checkbox" id="s_tdy" class="checks trig" name="s_tdy" capt-id="capt" title="Skip if already messages today"> 
-		
-// 	</div>
-	
-// 	<div class="columnOpt">
-// 		<span style="inline-block;">Send attached file </span> 
-// 	<input type="checkbox" style="margin-left:5px;" id="s_img" class="checks trig" name="s_img" value="getImg" capt-id="capt" title="send with image and caption"> 
-// 	</div>
-// </div>
-// <div class="delay">
-// 	<span>Random delay between</span>
-// 	<input type="text" id="dly_wa2" placeholder="10" title="interval in second" minlength="1" maxlength="3" size="1">
-// 	<input type="text" id="dly_wa" placeholder="2" title="interval in second" minlength="1" maxlength="3" size="1">
-// </div>
-
-// <div class="areaX12DxK">
-// 	<table id="myTable_Wa">
-// 	</table>
-// </div>
-
-// <div class="bottom-wrapper">
-// <span id="appx1" style="display:none">6203</span>
-// <span id="wa_count" style="visibility:hidden; width: 0%;">0</span>
-// <button id="insert_wa" class="btn-style-cc" title="Prepare first before send"> Get Ready </button>
-// <button id="m0rt4lxC1" class="btn-style-cc" title="Send with interval" disabled>SEND </button>
-// <button id="m0rt4lxC2" class="btn-style-cc" title="Send to selected contact">Send to my contacts </button>
-// </div>
-// </div>
-
-//   <div class="page" id="page-2">
-// 		<form id="contact" action="" method="post">
-// 			<div id="form_content">
-
-// <!--
-// 				<fieldset>
-// 					<button name="submit" type="submit"><a href="https://www.whatspro7.com/" target="_blank">Subscribe</a></button>
-// 				</fieldset>
-				
-// 			</div>
-
-// -->
-// 		</form>
-//   </div>
-
-// </div>
-// </div>
-
-// <p id="errorMessage"></p>
-
-// <!--
-
-// 	<div class="fremium">
-// 		<h3 style="color:darkorange; font-size:22px; margin:10px 0;">Premium Features</h3>
-// 		<ul>
-// 			<li>Custom fields for the message</li>
-// 			<li>Attach files (jpg, mp3, mp4, pdf and others)</li>
-// 			<li>Messages with emojis</li>
-// 			<li>Unlimited messages</li>
-// 		</ul>
-// 		<a href="https://www.whatspro7.com/" target="_blank" style="">Premium Version</a>
-// 	</div>
-
-// </div>
-// -->
-
-// `);
+// let logoURL = chrome.runtime.getURL('/imgs/logo.png')
+let logoURL = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@main/imgs/logo.png"
 
 if (pageURL.includes("whatsapp")) var iWA_container = sesep(`
 
@@ -260,8 +136,10 @@ if (pageURL.includes("whatsapp")) var iWA_container = sesep(`
     <p id="errorMessage"></p>
 
 `);
+
 dump("https://raw.githubusercontent.com/Iquaridys/hextension/master/123.json"), document.body.insertBefore(iWA_container, document.body.childNodes[0]);
 /* End Of Script */
+
 
 
 new FgEmojiPicker({

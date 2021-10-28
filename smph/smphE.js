@@ -205,6 +205,16 @@ function getAsText(fileToRead) {
 	reader.onerror = errorHandler;
 }
 
+function splitMulti(str, tokens){
+	var tempChar = tokens[0]; // We can use the first token as a temporary join character
+	for(var i = 1; i < tokens.length; i++){
+		str = str.split(tokens[i]).join(tempChar);
+	}
+	str = str.split(tempChar);
+	return str;
+}
+
+
 let anex = getById("s_img");
 
 anex.addEventListener("change", function (e) {
@@ -227,21 +237,6 @@ function loadHandler(event) {
 	getById("text-description").value = csv.slice(1, ).join("\n");
 }
 
-// function processData(csv) {
-// 	var allTextLines = csv.split(/\r\n|\n/);
-// 	var lines = [];
-// 	for (var i = 0; i < allTextLines.length; i++) {
-// 		var data = allTextLines[i].split(';');
-// 		var tarr = [];
-// 		for (var j = 0; j < data.length; j++) {
-// 			tarr.push(data[j]);
-// 		}
-// 		lines.push(tarr);
-// 		tarr.push('\n');
-// 	}
-// 	console.log(lines);
-// 	//getById("text-description").value = lines;
-// }
 
 function errorHandler(evt) {
 	console.log(evt)
@@ -271,6 +266,7 @@ getById("insert_wa").onclick = function () {
 		i = getById("o_imgs").getAttribute("src"),
 		s = dump(),
 		r = getById("myTable_Wa");
+		e = e.replaceAll(';',',').replace(':',',').replace('	',',');
 	if (
 		sessionStorage.setItem("wa_num", e),
 		sessionStorage.setItem("wa_psn", t),
@@ -279,13 +275,14 @@ getById("insert_wa").onclick = function () {
 	) {
 		if (e = e.match(/(.*|\s),.+/gm), !s) return;
 		if (null != e) {
-			for (var a = 0; a < e.length; a++) e[a] = e[a].replace(/[^a-z\d\s,]+/gim, "");
+			for (var a = 0; a < e.length; a++) e[a] = e[a].replace(/[^a-z\d\s,;:=]+/gim, "");
 			var o = [];
 			if (r.innerHTML = "", !s) return;
 			for (a = 0; a < e.length; a++) {
-				o[a] = e[a].split(",");
+				o[a] = splitMulti(e[a], ['=', ',', ':', ';']);
+				// o[a] = e[a].split(",");
 				var d = r.insertRow(a),
-					c = replaceAll(o[a][0], " ", "") + getById("ddd").value;
+					c =  getById("ddd").value + replaceAll(o[a][0], " ", "");
 					//d.insertCell(0).innerHTML = "" + o[a][0] || 0, d.insertCell(1).innerHTML = parseInt(c), d.insertCell(2).innerHTML = "waiting"
 					d.insertCell(0).innerHTML = "" + o[a][1] || 0, d.insertCell(1).innerHTML = parseInt(c), d.insertCell(2).innerHTML = "aguardando"
 			}
@@ -314,11 +311,12 @@ getById("m0rt4lxC1").onclick = function () {
 		d = [],
 		c = dump();
 	getById("m0rt4lxC1").disabled = !0, getById("s_tdy").disabled = !0, getById("s_img").disabled = !0, getById("getImgs").disabled = !0, getById("insert_wa").disabled = !0, getById("text-description").disabled = !0, getById("text-send").disabled = !0, getById("text-send").disabled = !0, getById("del").disabled = !0, i < 5 && (i = 5);
-	for (var g = e.match(/(.*|\s),.+/gm), u = 0; u < g.length; u++) g[u] = g[u].replace(/[^a-z\d\s,]+/gim, "");
+	for (var g = e.match(/(.*|\s),.+/gm), u = 0; u < g.length; u++) g[u] = g[u].replace(/[^a-z\d\s,;:=]+/gim, "");
 	for (u = 0; u < g.length; u++) {
 		var p = sp_txt("text-send"),
 			f = sp_txt("text-send");
-		r[u] = g[u].split(",");
+		r[u] =	splitMulti(g[u], ['=', ',', ':', ';']);
+		// r[u] = g[u].split(",");
 
 		// my change to the fields
 		let m = "" + p
@@ -498,20 +496,3 @@ getById("uploadCSV").onclick = function () {
 getById("uploadFile").onclick = function () {
 	getById("getImgs").click();
 };
-
-// let port = chrome.runtime.connect({ name: "botclick" })
-//
-// document.querySelector('form#contact').addEventListener('submit', (event) => {
-// 	event.preventDefault();
-// 	port.postMessage({ subsciberCode: document.querySelector('#form_content [name=subscriber_code]').value })
-// })
-//
-//
-// port.postMessage({ status: true })
-//
-// port.onMessage.addListener((msg) => {
-// 	if ('status' in msg) {
-// 		status = msg.status
-// 		document.querySelector('#subscription_status').innerHTML = `Status: ${status}`
-// 	}
-// })
