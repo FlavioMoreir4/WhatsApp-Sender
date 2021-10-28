@@ -246,7 +246,7 @@ getById("insert_wa").onclick = function () {
 		sessionStorage.setItem("wa_capt", n),
 		e && (!e || t || l || i) && (e || t || l || i) && (!l || i)
 	) {
-		if (e = e.match(/(.*|\s),.+/gm), !s) return;
+		// if (e = e.match(/(.*|\s),.+/gm), !s) return;
 		if (null != e) {
 			for (var a = 0; a < e.length; a++) e[a] = e[a].replace(/[^a-z\d\s,;:=]+/gim, "");
 			var o = [];
