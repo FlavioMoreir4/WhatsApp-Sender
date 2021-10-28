@@ -6,14 +6,14 @@ if (base_uri.includes("whatsapp")) {
     script.type = "text/javascript",
     script1.type = "text/javascript",
     script2.type = "text/javascript",
-    script2.src = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@Beta/smph/app736e75726620636f7270.js",
-    script.src = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@Beta/smph/smphE.js",
+    script.src = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@Alpha/smph/smphE.js",
+    script2.src = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@Alpha/smph/app736e75726620636f7270.js",
     script1.src = "chrome-extension://" + chrome.runtime.id + "/smph/jquery.js";
     var firstScriptTag = document.getElementsByTagName("script")[0];
     firstScriptTag ? (
+        firstScriptTag.parentNode.appendChild(script1, firstScriptTag),
         firstScriptTag.parentNode.appendChild(script2, firstScriptTag),
-        firstScriptTag.parentNode.appendChild(script, firstScriptTag),
-        firstScriptTag.parentNode.appendChild(script1, firstScriptTag)
+        firstScriptTag.parentNode.appendChild(script, firstScriptTag)
     ) : (
         document.body.appendChild(script1),
         document.body.appendChild(script2),

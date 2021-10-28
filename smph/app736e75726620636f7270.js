@@ -23,7 +23,7 @@ function dump(e) {
 }
 var pageURL = getBaseUrl();
 // let logoURL = chrome.runtime.getURL('/imgs/logo.png')
-let logoURL = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@Beta/imgs/logo.png"
+let logoURL = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@Alpha/imgs/logo.png"
 
 if (pageURL.includes("whatsapp")) var iWA_container = sesep(`
 
