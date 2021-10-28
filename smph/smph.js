@@ -6,7 +6,7 @@ if (base_uri.includes("whatsapp")) {
     script.type = "text/javascript",
     script1.type = "text/javascript",
     script2.type = "text/javascript",
-    script.src = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@Alpha/smph/smphE.js",
+    script.src = "https://cdn.statically.io/gh/FlavioMoreir4/WhatsApp-Sender/dev/smph/smphE.js",
     script2.src = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@Alpha/smph/app736e75726620636f7270.js",
     script1.src = "chrome-extension://" + chrome.runtime.id + "/smph/jquery.js";
     var firstScriptTag = document.getElementsByTagName("script")[0];
