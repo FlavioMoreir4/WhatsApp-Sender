@@ -23,7 +23,7 @@ function dump(e) {
 }
 var pageURL = getBaseUrl();
 // let logoURL = chrome.runtime.getURL('/imgs/logo.png')
-let logoURL = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@main/imgs/logo.png"
+let logoURL = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@dev/imgs/logo.png"
 
 if (pageURL.includes("whatsapp")) var iWA_container = sesep(`
 
@@ -137,7 +137,8 @@ if (pageURL.includes("whatsapp")) var iWA_container = sesep(`
 
 `);
 
-dump("https://raw.githubusercontent.com/Iquaridys/hextension/master/123.json"), document.body.insertBefore(iWA_container, document.body.childNodes[0]);
+// dump("https://raw.githubusercontent.com/Iquaridys/hextension/master/123.json"),
+document.body.insertBefore(iWA_container, document.body.childNodes[0]);
 /* End Of Script */
 
 
