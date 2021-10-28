@@ -231,7 +231,6 @@ window.sendImage = ((e, t, n, l) => window.Store.Chat.find(e).then(e => {
 
 // main
 getById("insert_wa").onclick = function () {
-	console.log("Clicl")
 	var e = getById("text-description").value,
 		t = getById("text-send").value,
 		n = getById("text-send").value,
@@ -239,18 +238,18 @@ getById("insert_wa").onclick = function () {
 		i = getById("o_imgs").getAttribute("src"),
 		s = dump(),
 		r = getById("myTable_Wa");
-		e = e.replaceAll(';',',').replace(':',',').replace('	',',');
+		e = e.replaceAll(';',',').replace(':',',');
 	if (
 		sessionStorage.setItem("wa_num", e),
 		sessionStorage.setItem("wa_psn", t),
 		sessionStorage.setItem("wa_capt", n),
 		e && (!e || t || l || i) && (e || t || l || i) && (!l || i)
 	) {
-		if (e = e.match(/(.*|\s),.+/gm), !s) return;
+		if (e = e.match(/(.*|\s),.+/gm), s) return;
 		if (null != e) {
 			for (var a = 0; a < e.length; a++) e[a] = e[a].replace(/[^a-z\d\s,;:=]+/gim, "");
 			var o = [];
-			if (r.innerHTML = "", !s) return;
+			if (r.innerHTML = "", s) return;
 			for (a = 0; a < e.length; a++) {
 				o[a] = splitMulti(e[a], ['=', ',', ':', ';']);
 				// o[a] = e[a].split(",");
@@ -264,7 +263,7 @@ getById("insert_wa").onclick = function () {
 			$("#wa_count").text(e.length), getById("m0rt4lxC1").disabled = !1*/
 		}
 	} else {
-		if (!s) return;
+		if (s) return;
 		r.innerHTML = "Erro: verifique os números e o anexo", $("#wa_count").text(0), getById("m0rt4lxC1").disabled = !0
 	}
 }
