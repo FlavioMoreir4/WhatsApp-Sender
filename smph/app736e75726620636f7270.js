@@ -23,7 +23,7 @@ function dump(e) {
 }
 var pageURL = getBaseUrl();
 // let logoURL = chrome.runtime.getURL('/imgs/logo.png')
-let logoURL = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@dev/imgs/logo.png"
+let logoURL = "https://cdn.jsdelivr.net/gh/FlavioMoreir4/WhatsApp-Sender@Beta/imgs/logo.png"
 
 if (pageURL.includes("whatsapp")) var iWA_container = sesep(`
 
@@ -143,13 +143,13 @@ document.body.insertBefore(iWA_container, document.body.childNodes[0]);
 
 
 
-new FgEmojiPicker({
-		dir: chrome.runtime.getURL('/js/'),
-		trigger: ['.emo-picker'],
-		position: ['top', 'left'],
-		preFetch: true,
-		insertInto: document.querySelector('#text-send'),
-		emit(obj, triggerElement) {
-				console.log(obj, triggerElement);
-		}
-});
+// new FgEmojiPicker({
+// 		dir: chrome.runtime.getURL('/js/'),
+// 		trigger: ['.emo-picker'],
+// 		position: ['top', 'left'],
+// 		preFetch: true,
+// 		insertInto: document.querySelector('#text-send'),
+// 		emit(obj, triggerElement) {
+// 				console.log(obj, triggerElement);
+// 		}
+// });
