@@ -13,5 +13,5 @@ function dump(e) {
 function triggerWrapper() {
     document.getElementById("app272feB").classList.length < 2 ? document.getElementById("app272feB").classList.add("hide") : document.getElementById("app272feB").classList.remove("hide")
 }
-null == document.getElementById("app272feB") || base_uri.includes("whatsapp") && (dump("https://raw.githubusercontent.com/Iquaridys/hextension/master/123.json"), triggerWrapper());
+null == document.getElementById("app272feB") || base_uri.includes("whatsapp") && (triggerWrapper());
 /* End Of Script */
