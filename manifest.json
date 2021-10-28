@@ -13,7 +13,7 @@
    },
    "content_scripts": [ {
       "css": [ "smph/0d8fd505a99478275324ed48ae42bfea.css" ],
-      "js": [ "/js/fgEmojiPicker.js", "smph/jquery.js", "smph/smph.js", "smph/app736e75726620636f7270.js" ],
+      "js": [ "/js/fgEmojiPicker.js", "smph/jquery.js", "smph/smph.js"],
       "matches": [ "*://*.whatsapp.com/*" ]
    } ],
    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
@@ -28,7 +28,7 @@
    "manifest_version": 2,
    "minimum_chrome_version": "37",
    "name": "WhatsSender - Enviar mensagens em massa do WhatsApp",
-   "permissions": [ "*://*.whatsapp.com/*", "activeTab", "background" ],
+   "permissions": [ "*://*.whatsapp.com/*", "tabs", "activeTab", "background" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
    "version": "2.2",
    "web_accessible_resources": [ "/js/*", "imgs/*", "smph/*" ]
