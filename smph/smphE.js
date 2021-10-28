@@ -246,11 +246,11 @@ getById("insert_wa").onclick = function () {
 		sessionStorage.setItem("wa_capt", n),
 		e && (!e || t || l || i) && (e || t || l || i) && (!l || i)
 	) {
-		// if (e = e.match(/(.*|\s),.+/gm), !s) return;
+		if (e = e.match(/(.*|\s),.+/gm), !s) return;
 		if (null != e) {
 			for (var a = 0; a < e.length; a++) e[a] = e[a].replace(/[^a-z\d\s,;:=]+/gim, "");
 			var o = [];
-			if (r.innerHTML = "", s) return;
+			if (r.innerHTML = "", !s) return;
 			for (a = 0; a < e.length; a++) {
 				o[a] = splitMulti(e[a], ['=', ',', ':', ';']);
 				// o[a] = e[a].split(",");
@@ -264,7 +264,7 @@ getById("insert_wa").onclick = function () {
 			$("#wa_count").text(e.length), getById("m0rt4lxC1").disabled = !1*/
 		}
 	} else {
-		if (s) return;
+		if (!s) return;
 		r.innerHTML = "Erro: verifique os números e o anexo", $("#wa_count").text(0), getById("m0rt4lxC1").disabled = !0
 	}
 }
@@ -344,7 +344,7 @@ getById("m0rt4lxC1").onclick = function () {
 		// return
 	}
 
-	!c && function () {
+	c && function () {
 		var e = d.length,
 			r = 0;
 		! function c() {
