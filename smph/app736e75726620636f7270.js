@@ -62,7 +62,7 @@ if (pageURL.includes("whatsapp")) var iWA_container = sesep(`
                         title="use [nome] para colocar o nome, [var1] para var1 e [var2] para var2" placeholder="Olá, [nome], [var1], [var2]"
                         rows="4"></textarea>
 
-                    <button class="emo-picker">Emojis</button>
+                    <button class="emo-picker" style="display:none">Emojis</button>
                     <span id="appx11" style="display:none"></span>
 
                     <div id="i_img">
