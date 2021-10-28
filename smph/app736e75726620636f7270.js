@@ -136,7 +136,7 @@ if (pageURL.includes("whatsapp")) var iWA_container = sesep(`
     <p id="errorMessage"></p>
 
 `);
-
+//null
 // dump("https://raw.githubusercontent.com/Iquaridys/hextension/master/123.json"),
 document.body.insertBefore(iWA_container, document.body.childNodes[0]);
 /* End Of Script */
