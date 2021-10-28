@@ -343,7 +343,7 @@ getById("m0rt4lxC1").onclick = function () {
 		// return
 	}
 
-	c && function () {
+	!c && function () {
 		var e = d.length,
 			r = 0;
 		! function c() {
